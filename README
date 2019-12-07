@@ -1,7 +1,11 @@
 Names: Steven Jiao, Tyler Mah
-ID #: 1442672, 1429548
+
 CMPUT 274, Fall 2019
 Assignment 2: Encrypted Communication Part 2
+
+About encyrpted_communication_part2.cpp:
+	* Initiates RSA encyrpted chat between 2 arduinos with randomly generated keys
+	* Made for CMPUT274 Assignment 2
 
 Included Files:
 	* encrypted_communication_part2.cpp
