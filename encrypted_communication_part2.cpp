@@ -198,7 +198,7 @@ uint32_t primeRand(uint32_t n) {
     // initialize return variable
     uint32_t randbytes = 0;
     // loop through as many bits as specified
-    for (uint32_t i = 0; i < n; i++) { // changed i from int to uint32;make sure it sitll works
+    for (uint32_t i = 0; i < n; i++) {
         // get a reading of pin1
         uint32_t reading = analogRead(A1);
        
@@ -245,7 +245,7 @@ uint32_t get_d(uint32_t a,uint32_t b) {
     // initialize matricies.
     int32_t r[40] = {(int32_t) a, (int32_t) b};
     int32_t t[40] = {0, 1};
-    int32_t s[40] = {1, 0}; // check this 
+    int32_t s[40] = {1, 0};
     int32_t q;
 
     // initialize index
@@ -295,20 +295,19 @@ void generateKeys(uint32_t& n, uint32_t& e, uint32_t& d) {
 
     d = get_d(e, phi_n);
 
-    // print the values obtained 
-    Serial.print("p: "); // test
-    Serial.println(p); // test
-    Serial.print("q: "); // test
-    Serial.println(q); // test
-    Serial.print("n: "); // test
-    Serial.println(n); // test
-    Serial.print("Phi(n): "); // test
-    Serial.println(phi_n); // test
-    Serial.print("e: "); // test
-    Serial.println(e); // test
-    Serial.print("d: "); // test
-    Serial.println(d); // test
-}
+    // TESTER PRINTOUTS: print the values obtained 
+    Serial.print("p: "); 
+    Serial.println(p); 
+    Serial.print("q: ");
+    Serial.println(q);
+    Serial.print("n: ");
+    Serial.println(n);
+    Serial.print("Phi(n): ");
+    Serial.println(phi_n); 
+    Serial.print("e: "); 
+    Serial.println(e); 
+    Serial.print("d: "); 
+    Serial.println(d); 
 
 
 
