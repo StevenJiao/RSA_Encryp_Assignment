@@ -1,0 +1,43 @@
+Names: Steven Jiao, Tyler Mah
+ID #: 1442672, 1429548
+CMPUT 274, Fall 2019
+Assignment 2: Encrypted Communication Part 2
+
+Included Files:
+	* encrypted_communication_part2.cpp
+	* Makefile
+	* README
+
+Accessories:
+	* Arduino Mega2560 x 2
+	* 330 Ohm resistor x 1
+
+Wiring instructions:
+	* Arduino A (Server): Arduino Pin 5V <--> Resistor <--> Arduino Pin 13
+	* Arduino B (Client): Arduino Pin GND <--> Arduino Pin 13
+	* Arduino A & B: A1 <--> (open wire end!)
+	* Arduino A GND <--> Arduino B GND
+	* Arduino A TX3 <--> Arduino B RX3
+	* Arduino A RX3 <--> Arduino B TX3
+
+Run instructions:
+	1. While connecting both arduinos to their respective computers via USBs, unzip the file and put encrypted_communication_part2.cpp and Makefile in the same folder. 
+	2. Navigate to this directory in the terminal as the working directory and enter run the command "make && make upload && serial-mon". 
+	3. Do step 2 for other Arduino.
+	4. Encrypted communications is now ready. Type into the serial-mon to enjoy encrypted communication!
+
+About encrypted_communications_part1.cpp: 
+	* Contains everything to implement the part 2 of assignment 2 as specified on ECLASS.
+	* Using serial, both arduinos can communicate to eachother and their messages will be encrypted after sending, and decrypted after recieving. 
+	* Part 2 includes generation of such keys as well as a more elegant "hand-shake" protocol for both client and server to go through to ensure correct key exchange and thus communication.
+
+Notes and Assumptions:
+	* Messages won't be spammed between both arduinos, as speed of typing was not accounted for but should not be an issue unless its typed too fast and overflows may occur. 
+	* The makefile is correctly uploaded. I have had issues where I had to run "make upload" a couple times before the code worked. 
+	* I made Serial show the values obtained through the random number generator each step of the way. I hope this isn't too messy!
+	* upper_sqrt() and isPrime() was taken from the morning problem "Primality Testing"
+	* gcd() was obtained from the in-class demonstration and code posted
+
+
+
+
