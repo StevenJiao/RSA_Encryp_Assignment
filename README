@@ -5,7 +5,9 @@ Assignment 2: Encrypted Communication Part 2
 
 About encyrpted_communication_part2.cpp:
 	* Initiates RSA encyrpted chat between 2 arduinos with randomly generated keys
-	* Made for CMPUT274 Assignment 2
+	* Contains everything to implement the part 2 of assignment 2 as specified on ECLASS.
+	* Using serial, both arduinos can communicate to eachother and their messages will be encrypted after sending, and decrypted after recieving. 
+	* Part 2 includes generation of such keys as well as a more elegant "hand-shake" protocol for both client and server to go through to ensure correct key exchange and thus communication.
 
 Included Files:
 	* encrypted_communication_part2.cpp
@@ -30,10 +32,6 @@ Run instructions:
 	3. Do step 2 for other Arduino.
 	4. Encrypted communications is now ready. Type into the serial-mon to enjoy encrypted communication!
 
-About encrypted_communications_part1.cpp: 
-	* Contains everything to implement the part 2 of assignment 2 as specified on ECLASS.
-	* Using serial, both arduinos can communicate to eachother and their messages will be encrypted after sending, and decrypted after recieving. 
-	* Part 2 includes generation of such keys as well as a more elegant "hand-shake" protocol for both client and server to go through to ensure correct key exchange and thus communication.
 
 Notes and Assumptions:
 	* Messages won't be spammed between both arduinos, as speed of typing was not accounted for but should not be an issue unless its typed too fast and overflows may occur. 
